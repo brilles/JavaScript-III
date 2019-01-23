@@ -12,6 +12,25 @@
   </head>
 
   <body>
-    <h1>JS III - Check your work in the console!</h1>
+    <div class="container">
+      <div class="title">
+        <h1>Duel Game:</h1>
+        <h2>
+          A duel is an arranged engagement in combat between two people, with
+          matched weapons, in accordance with agreed-upon rules. (wikipedia)
+        </h2>
+      </div>
+
+      <div class="new-game">
+        <button onclick="handlers.newGame()">NEW GAME</button>
+      </div>
+      <p>Create Player1</p>
+
+      <input id="name" placeholder="player1" type="text" />
+      <input id="player1Team" placeholder="team" type="text" />
+      <input id="player1Weapons" placeholder="weapons" type="text" />
+      <input id="player1Lanuage" placeholder="lanuage" type="text" />
+      <button onclick="handlers.playerOne()">Create!</button>
+    </div>
   </body>
 </html>

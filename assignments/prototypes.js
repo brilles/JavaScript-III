@@ -121,16 +121,16 @@ function weaponLog(cha) {
   return bow;
 }
 
-console.log(mage.createdAt); // Today's date
-console.log(archer.dimensions); // { length: 1, width: 2, height: 4 }
-console.log(swordsman.healthPoints); // 15
-console.log(mage.name); // Bruce
-console.log(swordsman.team); // The Round Table
-console.log(weaponLog(archer)); // Staff of Shamalama
-console.log(archer.language); // Elvish
-console.log(archer.greet()); // Lilith offers a greeting in Elvish.
-console.log(mage.takeDamage()); // Bruce took damage.
-console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
+// console.log(mage.createdAt); // Today's date
+// console.log(archer.dimensions); // { length: 1, width: 2, height: 4 }
+// console.log(swordsman.healthPoints); // 15
+// console.log(mage.name); // Bruce
+// console.log(swordsman.team); // The Round Table
+// console.log(weaponLog(archer)); // Staff of Shamalama
+// console.log(archer.language); // Elvish
+// console.log(archer.greet()); // Lilith offers a greeting in Elvish.
+// console.log(mage.takeDamage()); // Bruce took damage.
+// console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
 
 // Stretch task:
 // * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.
@@ -154,5 +154,29 @@ Hero.prototype.heroSays = function() {
   return `I, ${this.name} am a Hero`;
 };
 
-console.log(mage.villainSays());
-console.log(archer.heroSays());
+const handlers = {
+  newGame: function() {
+    console.log("Let's Get Started!");
+  },
+  playerOne: function() {
+    const playerA = document.getElementById("name").value;
+    const team = document.getElementById("player1Team").value;
+
+    const bill = new Humanoid({
+      createdAt: new Date(),
+      dimensions: {
+        length: 2,
+        width: 1,
+        height: 1
+      },
+      healthPoints: 0,
+      name: playerA,
+      team: team,
+      weapons: "d",
+      language: ""
+    });
+
+    console.log(`${playerA} created!`);
+    console.log(bill);
+  }
+};
