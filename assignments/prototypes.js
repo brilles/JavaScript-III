@@ -161,6 +161,8 @@ const handlers = {
   playerOne: function() {
     const playerA = document.getElementById("name").value;
     const team = document.getElementById("player1Team").value;
+    const weapons = document.getElementById("player1Weapons").value;
+    const language = document.getElementById("player1Lanuage").value;
 
     const bill = new Humanoid({
       createdAt: new Date(),
@@ -169,14 +171,17 @@ const handlers = {
         width: 1,
         height: 1
       },
-      healthPoints: 0,
+      healthPoints: 5,
       name: playerA,
       team: team,
-      weapons: "d",
-      language: ""
+      weapons: weapons,
+      language: language
     });
 
-    console.log(`${playerA} created!`);
+    const info = `${playerA} was created! Here's their info:team: ${team} weapon: ${weapons} language: ${language}`;
+
     console.log(bill);
+    console.log(info);
+    document.getElementById("playerInfo").innerHTML = info;
   }
 };
