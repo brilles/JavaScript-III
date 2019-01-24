@@ -178,7 +178,7 @@ const handlers = {
       language: language
     });
 
-    const info = `${playerA} was created! Here's their info:team: ${team} weapon: ${weapons} language: ${language}`;
+    const info = `${playerA} was created! Here's their info: TEAM: ${team} WEAPON: ${weapons} LANGUAGE: ${language}`;
 
     console.log(bill);
     console.log(info);
